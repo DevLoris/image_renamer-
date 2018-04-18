@@ -24,7 +24,7 @@ class Renamer {
     public function menu_html() {
         global $UploadScanner;
 
-        if($_GET['folder']) {
+        if(!empty($_GET['folder'])) {
             $folder =  $UploadScanner->fullName($_GET['folder']);
             if($folder == null) {
 
@@ -60,7 +60,7 @@ class Renamer {
             }
         }
         else {
-            if(isset($_POST['start'])) {
+            if(isset($_POST['start']) && isset($_POST['image_folder'])) {
                 foreach ($_POST['image_folder'] as $ufolder) {
                     $folder =  $UploadScanner->fullName($ufolder);
                     foreach ($UploadScanner->brokens($folder) as $file) {

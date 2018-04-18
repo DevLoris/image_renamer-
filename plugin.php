@@ -3,7 +3,7 @@
 Plugin Name: Image Renamer
 Plugin URI: http://lorispinna.com/wp/image_renamer/
 Description: A plugin to rename all uploads file without accents
-Version: 1.0
+Version: 1.1
 Author: Loris Pinna
 Author URI: http://lorispinna.com
 License: A "Slug" license name e.g. GPL2

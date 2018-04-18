@@ -44,7 +44,8 @@ class AccentList
         return join("|", $this->getBuggedList());
     }
     function isBugged($file_path) {
-        $file_name = end(explode("/", $file_path));
+        $file_list = (explode("/", $file_path));
+        $file_name = $file_list[count($file_list) - 1];
         return (preg_match("{(".$this->getRowBuggedList().")}", $file_name));
     }
     function newName($file_path) {
